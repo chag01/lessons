@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 
 /** переменные хранят значения. Сперва переменые надо объявить(declaration) и затем присвоить ей значение(initialization)
 // декларация подразумевает выделение памяти для хранения  **/
@@ -19,9 +20,10 @@ public class Variables {
 
         /** логический тип **/
         boolean myBoolen = true; // может true/false
-
+        boolean myBoolean1 = 5>6;// булеан так-же можно задавать условием сравнения
+        System.out.print("myBoolean1 = " + myBoolean1);
         /** числовой **/
         byte myByte = 41; // вмещает 8 битов (1 байт) - число от -128 до 127
-        System.out.print(myInt);
+        System.out.print("\n" +myInt);
     }
 }
