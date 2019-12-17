@@ -3,3 +3,7 @@
 *.iml
 .idea/*
 .gitignore
+/idea
+.idea/compiler.xml
+.idea/.gitignore
+.gitignore
