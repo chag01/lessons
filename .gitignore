@@ -6,3 +6,4 @@
 .idea/compiler.xml
 .idea/.gitignore
 .gitignore
+/out
