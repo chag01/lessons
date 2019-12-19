@@ -1,4 +1,9 @@
-package PACKAGE_NAME;
+/**
+ *
+ */
 
 public class DoWhile {
+    public static void main (String [] args){
+
+    }
 }

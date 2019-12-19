@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 .idea/*
 *.iml
 .target/
 .target/*
 /.idea
+=======
+# Project exclude paths
+/target/
+*.iml
+.idea/*
+/idea
+.idea/compiler.xml
+.idea/.gitignore
+.gitignore
+>>>>>>> master
 /out
