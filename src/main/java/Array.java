@@ -24,10 +24,11 @@ public class Array {
          **/
         // инициализация массива циклом for
         for (int i = 0; i < numbers.length; i ++){   // длина массива определяется именем массива, затем точка и length
-            numbers [i] = i*10;
+            numbers [i] = i * 10;
         }
         for (int i = 0; i < numbers.length; i ++) {
             System.out.println( numbers [i] );
+
         }
     }
 }
