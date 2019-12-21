@@ -1,10 +1,52 @@
 /**
- *
+ * если не задали значение для ячеек примитивного типа, то по умолчанию они инициализируются как 0, а в ссылочную ячейку по умолчанию подставляется null
+ * for each - цикл в которм проходит по каждому элементу массива последовательно, его удобнее использовать с массивами
+ * есть одномерные и многомерные массивы
+ *  * Одномерные массимы - одна линия значений(последовательность чисел)
+ *  * многомерные массивы - представляет из себя матрицу/таблицу чисел. Что бы обратиться к элементу необходимо 2 индекса
  */
 public class Array_of_Strings {
-    public static void main(String [] args){
-        int [] numbers = new int [5];
-        numbers [0] = 10;
-        System.out.println(numbers[0]);
+    public static void main(String[] args) {
+        int[] numbers = new int[5];
+        numbers[0] = 10;
+        /*ссылочные типы данных с большой буквы, т.к. они являются классами*/
+        String[] strings = new String[3];  // 3 ячейки, каждая из них может вместить в себя объект класса String - тобишь строку
+        strings[0] = "Hello";
+        strings[1] = "bye bye";
+        strings[2] = "java";
+
+        // вывод значений массива при помощи цикла for
+        System.out.println("Вывод всех значений ссылочного массива циклом for");
+        for (int i = 0; i < strings.length; i++) {
+            System.out.println(strings[i]);
+        }
+
+        System.out.println();  // пуустая строка
+
+        // вывод значений массива при помощи цикла for each
+        System.out.println("Вывод всех значений ссылочного массива циклом for each");
+        for (String string : strings) {       // String - класс; string - переменная которая будет задействована в цикле; strings - наш массив
+            System.out.println(string);
+        }
+
+        System.out.println();  // пуустая строка
+
+        // массив можно создавать и инициализировать сразу
+        int[] numbers1 = {5, 10, 15};
+
+        // вывод примитивных типов с массива при помощи for each
+        System.out.println("Вывод всех значений примитивного  массива циклом for each");
+        for (int massive : numbers1){
+            System.out.println(massive);
+        }
+
+        // подсчет и вывод суммы значений массива при помощи цикла for each
+        System.out.println("\nподсчет и вывод суммы значений массива при помощи цикла for each");
+        int sum = 0;
+        for (int x : numbers1) {
+            sum = sum + x;
+            System.out.println("сложение = " +sum);
+        }
+
     }
 }
