@@ -5,8 +5,9 @@ import org.w3c.dom.ls.LSOutput;
  * класс - это шаблон или описание объекта . У класса могут быть данные(переменные) и действия(методы)
  * объект - экземпляр класса
  * при создании метода необходимо указывать тип данных которые метод вернет. void - означает что метод ничего не возвращает;
- * return возвращает переменную с типом данных описанном при создании метода
+ * return возвращает переменную с типом данных описанном при создании метода, так-же можно вернуть массив
  * после return осуществляется сразу выход из метода
+ * при передаче параметра в метод - важно передавать нужный тип данных.
  */
 
 public class ClassAndObjects {
@@ -18,7 +19,7 @@ public class ClassAndObjects {
     person1.age=22;
     System.out.println("Меня зовут " +person1.name +", мой возраст: " +person1.age);
     person1.calculateYearsToRetirement();       // вызов метода который считает возраст до пенсии (60 - age)
-    person1.adultYears();                       // вызов метода который считает количество лет совершенолетних (age - 18) и возвращает переменную типа int
+    person1.adultYears();                       // вызов метода который количество лет с момента совершенолетия (age - 18) и возвращает переменную типа int
       int year1 = person1.adultYears();         // декларация переменной year1 и инициализируем переменной типом int которую возвращает метод adultYears()
         System.out.println("уже совершенолетний " +person1.adultYears() +" годиков. Это " +person1.adultYears()*365 +" дней"); // передать можно как и переменную year1 так и сам вызов метода
 
@@ -28,7 +29,7 @@ public class ClassAndObjects {
     person2.age=20;
     System.out.println("\nМеня зовут " +person2.name +", мой возраст: " +person2.age);
     person2.calculateYearsToRetirement();       // вызов метода который считает возраст до пенсии (60 - age)
-        person2.adultYears();                   // вызов метода который считает количество лет совершенолетних (age - 18) и возвращает переменную типа int
+        person2.adultYears();                   // вызов метода который считает количество лет с момента совершенолетия (age - 18) и возвращает переменную типа int
     int year2 = person2.adultYears();           // декларация переменной year2 и инициализируем переменной типом int которую возвращает метод adultYears()
         System.out.println("уже совершенолетний " +year2 +" годиков");
 
@@ -36,12 +37,12 @@ public class ClassAndObjects {
 
      //создание объекта person3
      Person person3 = new Person();         // создание объекта person3 класса Person
-     person3.name="Тестирович";
+     person3.setName("Тестирович");        // аналогично записи person3.name="Тестирович";
      person3.age=43;
         System.out.println();
      person3.speak();                           // вызов метода который не ожидает переменные
      person3.calculateYearsToRetirement();      // вызов метода который считает возраст до пенсии (60 - age)
-     person3.adultYears();                      // вызов метода который считает количество лет совершенолетних (age - 18) и возвращает переменную типа int
+     person3.adultYears();                      // вызов метода который считает количество лет с момента совершенолетия (age - 18) и возвращает переменную типа int
      int year3 = person3.adultYears();           // декларация переменной year3 и инициализируем переменной типом int которую возвращает метод adultYears()
         System.out.println("уже совершенолетний " +year3 +" годиков");
 
@@ -50,7 +51,7 @@ public class ClassAndObjects {
         System.out.println();
         person4.showInfo("denis", 27);       // вызов метода showInfo из класса Person и передаем в него 2 параметра
         person4.age = 27;
-        person4.adultYears();                           // вызов метода который считает количество лет совершенолетних (age - 18) и возвращает переменную типа int
+        person4.adultYears();                           // вызов метода который считаетколичество лет с момента совершенолетия (age - 18) и возвращает переменную типа int
         int year4 = person4.adultYears();                // декларация переменной year3 и инициализируем переменной типом int которую возвращает метод adultYears()
         System.out.println("уже совершенолетний " +year4 +" годиков");
     }
@@ -59,20 +60,25 @@ public class ClassAndObjects {
 class Person{
     String name;
     int age;
-    void showInfo(String name, int age){        // метод ожидает что при его вызове передадут 2 параметра
+
+    void setName (String username){             // метод ожидает String и устанавливает его в переменную name
+        name = username;
+    }
+
+    void showInfo(String name, int age){        // метод принимает 2 параметра и выводит информацию
         System.out.println("Меня зовут " +name +", мой возраст: " +age);
     }
 
-    void speak(){
+    void speak(){                               // метод выводит информацию
         System.out.println("Меня зовут " +name +", мой возраст: " +age);
     }
 
-    void calculateYearsToRetirement(){
+    void calculateYearsToRetirement(){          // метод расчитывает количество лет до пенсии  и выводит информацию
         int remainToRetirement = 60 - age;
         System.out.println("Осталось до пенсии: " +remainToRetirement);
     }
 
-    int adultYears(){
+    int adultYears(){                           // метод расчитывает количество лет с момента совершенолетия и возвращает переменную
         int yearsAdult = age - 18;
         return yearsAdult;
     }
