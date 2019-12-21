@@ -25,7 +25,7 @@ public class Multidimensional_arrays {
         // вывод двумерного массива, для этого необходимо 2 цикла
         System.out.println("\nВывод двумерного массива");
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
+            for (int j = 0; j < matrix[i].length; j++) {        // j<matrix[i].length - запрашивает количество элементов в строке под индексом = i
                 System.out.print(matrix[i][j] + " ");           // После каждого элемента добавлен пробел. Убрана LN из println, для вывода в строку элементов в строку а не каждого с новой
             }
            System.out.println();                               // переносить на новую строку после каждой строки массива
