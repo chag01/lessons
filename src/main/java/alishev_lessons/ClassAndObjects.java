@@ -14,7 +14,7 @@ public class ClassAndObjects {
     public static void main (String [] args){
 
         // создание объекта person1
-    Person person1 = new Person();      // создание объекта person1 класса alishev_lessons.Person
+    Person person1 = new Person();      // создание объекта person1 класса Person
     person1.name="Timofey";
     person1.age=22;
     System.out.println("Меня зовут " +person1.name +", мой возраст: " +person1.age);
@@ -24,7 +24,7 @@ public class ClassAndObjects {
         System.out.println("уже совершенолетний " +person1.adultYears() +" годиков. Это " +person1.adultYears()*365 +" дней"); // передать можно как и переменную year1 так и сам вызов метода
 
         // создание объекта person2
-    Person person2 = new Person();      // создание объекта person2 класса alishev_lessons.Person
+    Person person2 = new Person();      // создание объекта person2 класса Person
     person2.name="Alex";
     person2.age=20;
     System.out.println("\nМеня зовут " +person2.name +", мой возраст: " +person2.age);
@@ -36,7 +36,7 @@ public class ClassAndObjects {
 
 
      //создание объекта person3
-     Person person3 = new Person();         // создание объекта person3 класса alishev_lessons.Person
+     Person person3 = new Person();         // создание объекта person3 класса Person
      person3.setName("Тестирович");        // аналогично записи person3.name="Тестирович";
      person3.age=43;
         System.out.println();
@@ -49,7 +49,7 @@ public class ClassAndObjects {
     // создание объекта si класса alishev_lessons.Person, и вызов метода который ожидаем параметры
     Person person4 = new Person();
         System.out.println();
-        person4.showInfo("denis", 27);       // вызов метода showInfo из класса alishev_lessons.Person и передаем в него 2 параметра
+        person4.showInfo("denis", 27);       // вызов метода showInfo из класса Person и передаем в него 2 параметра
         person4.age = 27;
         person4.adultYears();                           // вызов метода который считаетколичество лет с момента совершенолетия (age - 18) и возвращает переменную типа int
         int year4 = person4.adultYears();                // декларация переменной year3 и инициализируем переменной типом int которую возвращает метод adultYears()
