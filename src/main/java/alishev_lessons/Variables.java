@@ -1,3 +1,5 @@
+package alishev_lessons;
+
 import java.sql.SQLOutput;
 
 /** переменные хранят значения. Сперва переменые надо объявить(declaration) и затем присвоить ей значение(initialization)

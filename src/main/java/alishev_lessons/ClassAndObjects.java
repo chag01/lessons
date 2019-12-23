@@ -1,4 +1,4 @@
-import org.w3c.dom.ls.LSOutput;
+package alishev_lessons;
 
 /**
  * публичный класс - может быть только один, а вспомогательных(дополнительных) сколько угодно. Имя публичного класса должно соответствовать имени java файла
@@ -46,7 +46,7 @@ public class ClassAndObjects {
      int year3 = person3.adultYears();           // декларация переменной year3 и инициализируем переменной типом int которую возвращает метод adultYears()
         System.out.println("уже совершенолетний " +year3 +" годиков");
 
-    // создание объекта si класса Person, и вызов метода который ожидаем параметры
+    // создание объекта si класса alishev_lessons.Person, и вызов метода который ожидаем параметры
     Person person4 = new Person();
         System.out.println();
         person4.showInfo("denis", 27);       // вызов метода showInfo из класса Person и передаем в него 2 параметра
