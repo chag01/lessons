@@ -40,7 +40,7 @@ public class Constructors_Static {
 */
         HumanProperties human3 = new HumanProperties("Tom", 30);
         System.out.println();
-        HumanProperties.showCountPeople();  //  вызов статического метода для отображения кол-ва созданных объектов
+        HumanProperties.showCountOfPeople();  //  вызов статического метода для отображения кол-ва созданных объектов
 
     }
 
@@ -67,7 +67,7 @@ class HumanProperties {
         System.out.println("Объекту создан с полем name && age. Создано объектов:" +countPeople);
     }
 
-    public static void showCountPeople (){
+    public static void showCountOfPeople (){
         System.out.println("Всего создан объектов:" +countPeople );
     }
 
