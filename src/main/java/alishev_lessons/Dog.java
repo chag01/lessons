@@ -5,7 +5,7 @@
 
 package alishev_lessons;
 
-public class Dog extends Animal{
+public class Dog extends Animal{                // наследие класса может быть одно, а реализация интерфейсов - много
     public void bark(){      // метод который справедлив только для собаки
         System.out.println("I am barking");
     }
