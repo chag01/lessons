@@ -1,6 +1,6 @@
 package alishev_lessons;
 
-public class Animal {
+ public class Animal {
     String name = "Some animal";
     private int id;
 
@@ -36,3 +36,4 @@ public class Animal {
         // необходимо так как дефолтный конструктор был переопределен
     }
 }
+
