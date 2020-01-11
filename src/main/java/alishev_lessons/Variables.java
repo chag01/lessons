@@ -11,7 +11,7 @@ public class Variables {
         myInt = 412;
         int mySecondInt = 1494;
         short myShort = 3449;
-        long myLong = 412412521;
+        long myLong = 4124125214214214L;    // в конце long необходимо ставить 'l", т.к. целочисленное по умолчанию является int. long в 2 раза больше чем int
 
         /** вещественные типы**/
         double myDouble = 235.62; // вмещает 64 бита информации
@@ -26,10 +26,24 @@ public class Variables {
         System.out.print("myBoolean1 = " + myBoolean1);
         /** числовой **/
         byte myByte = 41; // вмещает 8 битов (1 байт) - число от -128 до 127
-        System.out.print("\n" +myInt);
+        System.out.println("\n" +myInt);
 
         int value = 0; // память выделяется только под число, максимум 32 бита
         String s;       // память выделяется для ссылки s
         s = "aisdhoaisdhas"; // память выделяется на строку
+
+        // приведение типов данных
+        int a = 123;
+        long l = a; // неявное приведение. В лонг всегда поместится число типа int
+        // int x = l; // будет ошибка, т.к. нету приведения типа, и int не может вместить в себя long
+        int x = (int)l; // явное приведение
+        float f = (float)123.45; // конвертация double во float
+
+        double o = 123.56;
+        int p = (int)o;  // явное привдение из double в int
+        System.out.println(p);
+        long v = Math.round(o);  // округление перменной o и конвертация в long
+        System.out.println(v);
+
     }
 }
